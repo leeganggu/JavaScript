@@ -25,5 +25,22 @@
 		</ul>
 		<div id="showResult"></div>	
 	</div>	
+
+	<script>
+
+		function showPrice(){
+			let originPrice = document.querySelector("#oPrice").value;
+			let rate = document.querySelector("#rate").value;
+
+				if(originPrice != "" && rate != ""){
+					let savedPrice = originPrice * (rate/100);
+					let resultPrice = originPrice - savedPrice;
+
+					document.querySelector("#showResult").innerHTML = `${savedPrice}원이 할인 되어 ${resultPrice}원이 계산됩니다.`;
+				}else{
+					alert("값을 입력하세요.");
+				}
+			}
+	</script>
 </body>
 </html>
