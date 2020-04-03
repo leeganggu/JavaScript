@@ -50,6 +50,42 @@
             // i++;
             // }
 
+            // let result = true;
+
+            // while(result){
+            //     if(prompt("100보다 큰 숫자를 입력 하시오") > 100){
+            //         result = false;
+            //     }
+            // }
+
+            let num = prompt("숫자를 입력하세요"), count = 0, result = "";
+
+            for(i = 2; i <= num; i++){
+                for(j = 1; j <= i; j++){
+                    if((i%j)==0){
+                        count++;
+                    }
+                }
+                if(count == 2){
+                    result += i + ", ";
+                }
+                count = 0;
+            }
+
+            document.write(result);
+
+//             let n = 10;
+
+// nextPrime:
+// for (let i = 2; i <= n; i++) { // 각 i에 대하여 반복문을 돌림
+
+//   for (let j = 2; j < i; j++) { // 제수(나눗수)를 찾음
+//     if (i % j == 0) continue nextPrime; // 소수가 아니므로 다음 i로 넘어감
+//   }
+
+//   alert( i ); // 소수
+// }
+
         </script>
     </body>
 </html>
