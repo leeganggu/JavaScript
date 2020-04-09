@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            //let user = new Object();
+            // let name = "John";
+
+            // let user = {
+            //     name,
+            //     age : 30,
+            //     "likes birds" : true
+            // };
+
+            // alert(user.name);
+            // alert(user.age);
+
+            // alert(user["likes birds"]);
+
+            // for(let key in user){
+            //     alert(key);
+            //     alert(user[key]);
+            // }
+
+            //             let user = {
+            //   name: "John"
+            // };
+
+            // Object.defineProperty(user, "name", {
+            //   writable: false
+            // });
+
+            // user.name = "Pete"; // Error: Cannot assign to read only property 'name'
+
+            // alert(user.name);
+
+            //객체 복사와 병합
+            // let user = {
+            //   name: "John",
+            //   age: 30
+            // };
+
+            // let clone = {}; // 새로운 빈 객체
+
+            // // 빈 객체에 user 프로퍼티 전부를 복사해 넣습니다.
+            // for (let key in user) {
+            //   clone[key] = user[key];
+            // }
+
+            // // 이제 clone은 완전히 독립적인 복제본이 되었습니다.
+            // clone.name = "Pete"; // clone의 데이터를 변경합니다.
+
+            // alert( user.name ); // 기존 객체에는 여전히 John이 있습니다.
+
+            // let user = {name : "John"};
+
+            // let permissions1 = {canView:true};
+            // let permissrion2 = {canEdit:true};
+
+            // Object.assign(user, permissions1, permissrion2);
+
+            // alert(user.canEdit);
+
+            // let user = {
+            //     name : "John",
+            //     sizes:{
+            //         height : 182,
+            //         width : 50
+            //     }
+            // };
+
+            // let clone = Object.assign({}, user);
+
+            // alert(clone.sizes.height);
+
+            //과제 1
+            // let user = {};
+
+            // user.name = "John";
+            // user.surname = "Smith";
+            // user.name = "Pete";
+            // delete user.name;
+
+            //과제 2
+            // function isEmpty(obj){
+            //     for(let k in obj){
+            //         return false;
+            //     }
+            //     return true;
+            // }
+
+            // let schedule = {};
+
+            // alert(isEmpty(schedule));
+
+            // schedule["8:30"] = "get up";
+
+            // alert( isEmpty(schedule) ); // false
+            
+            //과제4
+            // let salaries = {
+            //     John: 100,
+            //     Ann: 160,
+            //     Pete: 130
+            // }
+
+            // let sum = 0;
+
+            // for(let key in salaries){
+            //     sum += salaries[key];
+            // }
+
+            // alert(sum);
+
+            //과제5
+            function multiplyNumeric(obj){
+                for(let key in obj){
+                    if(typeof(obj[key]) == "number"){
+                        obj[key] = obj[key] * 2;
+                    }
+                }
+            }
+
+            let menu = {
+                width: 200,
+                height: 300,
+                title: "My menu"
+            };
+            multiplyNumeric(menu);
+
+            for(let k in menu){
+                alert(menu[k]);
+            }
+
+        </script>
+    </body>
+</html>
