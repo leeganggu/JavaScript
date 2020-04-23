@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- <div id="elem">
+            <div id="elem-content">Element</div>
+        </div> -->
+
+        <!-- <ul>
+            <li>1-1</li>
+            <li>1-2</li>
+        </ul>
+        <ul>
+            <li>2-1</li>
+            <li>2-2</li>
+        </ul>
+
+        <script>
+            //let elem = document.getElementById("elem");
+
+            // elem.style.background = "blue";
+
+            // window["elem-content"].style.background = "red";
+
+            let elements = document.querySelectorAll('ul > li:last-child');
+
+            for(let elem of elements){
+                alert(elem.innerHTML);
+            }
+        </script> -->
+
+        <!-- <a href="http://example.com/file.zip">...</a>
+        <a href="http://ya.ru">...</a>
+
+        <script>
+        // document.body.children가 아니더라도 컬렉션이라면 이 메서드를 적용할 수 있습니다.
+        for (let elem of document.body.children) {
+            if (elem.matches('a[href$="zip"]')) {
+            alert("주어진 CSS 선택자와 일치하는 요소: " + elem.href );
+            }
+        } -->
+
+        <!-- <h1>목차</h1>
+
+        <div class="contents">
+        <ul class="book">
+            <li class="chapter">1장</li>
+            <li class="chapter">2장</li>
+        </ul>
+        </div>
+
+        <script>
+            let chapter = document.querySelector('.chapter'); // LI
+
+            alert(chapter.closest('.book')); // UL
+            alert(chapter.closest('.contents')); // DIV
+
+            alert(chapter.closest('h1')); // null(h1은 li의 조상 요소가 아님)
+        </script>
+        </script> -->
+
+        <!-- <form name="my-form">
+            <div class="article">글</div>
+            <div class="long article">내용이 긴 글</div>
+        </form>
+          
+        <script>
+            // name 속성을 이용해 검색
+            let form = document.getElementsByName('my-form')[0];
+          
+            // fomr 내에서 클래스 이름을 이용해 검색
+            let articles = form.getElementsByClassName('article');
+            alert(articles.length); // 2. 클래스 속성값이 'article'인 요소는 2개입니다.
+
+            alert(form.contains(form.getElementsByClassName('article')[0]));
+        </script> -->
+
+        <script>
+            elementId = document.getElementById("age-table");
+            document.getElementsByTagName('label');
+            document.getElementsByTagName('td')[0];
+            document.querySelector('form[name=search]');
+            document.querySelector('form').getElementsByTagName('input')[0];
+            let inputs = document.querySelector('form').querySelectorAll('input').length;
+            document.querySelector('form').getElementsByTagName('input')[inputs.length-1];
+        </script>
+    </body>
+</html>
