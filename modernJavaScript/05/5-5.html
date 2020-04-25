@@ -22,15 +22,15 @@
 
             // alert( arr ); // 5,3,8,1 (기존 배열은 변경되지 않았습니다.)
 
-            // function filterRangeInPlace(arr, a, b) {
-            //     arr.map((item, index) => a <= item && item <= b ? arr = arr : arr.splice(index, 1));
-            // }
+             function filterRangeInPlace(arr, a, b) {
+                 arr.map((item, index) => a <= item && item <= b ? arr = arr : arr.splice(index, 1));
+             }
 
-            // let arr = [5, 3, 8, 1];
+             let arr = [5, 3, 8, 1];
 
-            // filterRangeInPlace(arr, 1, 2); // 1과 4 사이에 있지 않은 요소는 모두 제거함
+             filterRangeInPlace(arr, 1, 2); // 1과 4 사이에 있지 않은 요소는 모두 제거함
 
-            // alert( arr ); // [3, 1]
+             alert( arr ); // [3, 1]
 
             //let arr = [5, 2, 1, -10, 8];
 
