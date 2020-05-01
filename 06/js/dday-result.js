@@ -10,6 +10,10 @@ calcDate(100);  // 100일 기념일을 계산해서 표시합니다.
 calcDate(200);  // 200일 기념일을 계산해서 표시합니다.
 calcDate(365);  // 1년 기념일을 계산해서 표시합니다.
 calcDate(500);  // 500일 기념일을 계산해서 표시합니다.
+calcDate(365*2);
+
+let day = new Date("2016-02-02");
+alert(day);
 
 function calcDate(days) {
 	var future = toFirst + days*(1000*60*60*24);  // 처음 만난 날에 밀리초로 바꾼 100일을 더합니다.

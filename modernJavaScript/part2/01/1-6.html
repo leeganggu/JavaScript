@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- <a id="a" href="#hello">link</a>
+        <script>
+        // 속성
+        alert(a.getAttribute('href')); // #hello
+
+        // 프로퍼티
+        alert(a.href ); // 실행되는 사이트 주소에 따라 http://site.com/page#hello 형태로 값이 저장됨
+        </script> -->
+
+        <!-- <div data-widget-name="menu">Choose the genre</div>
+
+        <script>
+            let elem = document.querySelector('div');
+            alert(elem.dataset.widgetName);
+        </script> -->
+
+        <a name="list">the list</a>
+        <ul>
+        <li><a href="http://google.com">http://google.com</a></li>
+        <li><a href="/tutorial">/tutorial.html</a></li>
+        <li><a href="local/path">local/path</a></li>
+        <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+        <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+        <li><a href="http://internal.com/test">http://internal.com/test</a></li>
+        </ul>
+
+        <script>
+            // setting style for a single link
+            let links = document.querySelectorAll('a');
+            for (let link of links) {
+            let href = link.getAttribute('href');
+            if (!href) continue; // 속성이 존재하지 않음
+
+            if (!href.includes('://')) continue; // 프로토콜이 존재하지 않음
+
+            if (href.startsWith('http://internal.com')) continue; // 내부 링크
+
+            link.style.color = 'orange';
+}
+        </script>
+    </body>
+</html>
