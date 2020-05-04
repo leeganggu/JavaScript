@@ -1,0 +1,23 @@
+.logo{
+    height: 82px;
+    width: 82px;
+}
+.headerMenu>a{
+    float: left;
+    margin-left: 20px;
+    width: 30%;
+}
+.headerMenu{
+    height: 25%;
+}
+article{
+    margin: 50px;
+    height: 500px;
+}
+section>article>div{
+    height: 100%;
+    width: 50%;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+}
