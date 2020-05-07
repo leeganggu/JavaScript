@@ -18,15 +18,13 @@
             </article>
         </section> -->
 
-        <button class="pack" onclick="next();">포장</n>주문</button>
-        <button class="pack" onclick="next();">매장</n>주문</button>
+        <button class="pack" onclick="next(1);">포장</n>주문</button>
+        <button class="pack" onclick="next(2);">매장</n>주문</button>
 
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>
-            function next(){
-                var fso=new ActiveXObject('Scripting.FileSystemObject');
-                var fileObj=fso.CreateTextFile("C:\\work\\test.txt",true);
-                fileObj.WriteLine("Hello, I am Soonrok!!!");
-                fileObj.Close();
+            function next(value){
+                window.location.href="menu.html?value=" + value;
             }
 
         </script>
