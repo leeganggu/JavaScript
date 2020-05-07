@@ -15,9 +15,31 @@ article{
     height: 500px;
 }
 section>article>div{
-    height: 100%;
+    position: relative;
+    float: left;
+    top: 50%;
+    width: 50%;
+
+    
+}
+section>article>div>div{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin-left: 45%;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.pack{
+    width: 100px;
+    background-color: blue;
+    border: none;
+    color: #fff;
+    padding: 15px 0;
+    top: 50%;
     width: 50%;
     float: left;
-    text-align: center;
-    vertical-align: middle;
+    cursor: pointer;
 }

@@ -7,11 +7,28 @@
         <header>
             <a href="home.html" class="logo"><img src="img/logo_header.2861c9a2.gif"></a>
         </header>
-        <section>
+        <!-- <section>
             <article>
-                <div>포장</div>
-                <div>매장</div>
+                <div>
+                    <div><a href="menu.html" style="text-decoration: none;">포장</n>식사</a></div>
+                </div>
+                <div>
+                    <div><a href="menu.html" style="text-decoration: none;">매장</n>식사</a></div>
+                </div>
             </article>
-        </section>
+        </section> -->
+
+        <button class="pack" onclick="next();">포장</n>주문</button>
+        <button class="pack" onclick="next();">매장</n>주문</button>
+
+        <script>
+            function next(){
+                var fso=new ActiveXObject('Scripting.FileSystemObject');
+                var fileObj=fso.CreateTextFile("C:\\work\\test.txt",true);
+                fileObj.WriteLine("Hello, I am Soonrok!!!");
+                fileObj.Close();
+            }
+
+        </script>
     </body>
 </html>
