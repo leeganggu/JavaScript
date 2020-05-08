@@ -3,38 +3,48 @@
     <head>
         <link rel="stylesheet" href="css/header.css">
     </head>
-    <body>
+    <body onload="loadDoc();">
+        <!-- <h2 id="gname"></h2>
+        <p>멤버 구성: <span id="members"></span></p>
+        <h3>앨범 목록</h3>
+        <ul id="albums"></ul> -->
+
         <header>
             <a href="home.html" class="logo"><img src="img/logo_header.2861c9a2.gif"></a>
         </header>
-        <div class="subtitWrap">
-        <h3>메뉴소개</h3>
-            <div class="tab01 w_st02 m_shadow m_multi">
-                <ul>
-                    <li class="on">
-                        <button type="button"><span>스페셜</span></button>
-                    </li>
-                    <li class="">
-                        <button type="button"><span>프리미엄</span></button>
-                    </li>
-                    <li class="">
-                        <button type="button"><span>와퍼&amp;버거</span></button>
-                    </li>
-                    <li class="">
-                        <button type="button"><span>치킨&amp;치킨버거</span></button>
-                    </li>
-                    <li class="">
-                        <button type="button"><span>사이드</span></button>
-                    </li>
-                    <li class="">
-                        <button type="button"><span>음료&amp;디저트</span></button>
-                    </li>
-                    <li class="">
-                        <button type="button"><span>아침메뉴</span></button>
-                    </li>
-                </ul>
+        <nav>
+            <div class="subtitWrap">
+                <h3>메뉴소개</h3>
+                <div class="tab01 w_st02 m_shadow m_multi">
+                    <ul>
+                        <li class="on">
+                            <button type="button" onclick="loadMenu('special.xml');"><span>스페셜</span></button>
+                        </li>
+                        <li class="">
+                            <button type="button" onclick="loadMenu('premium.xml');"><span>프리미엄</span></button>
+                        </li>
+                        <li class="">
+                            <button type="button"><span>와퍼&amp;버거</span></button>
+                        </li>
+                        <li class="">
+                            <button type="button"><span>치킨&amp;치킨버거</span></button>
+                        </li>
+                        <li class="">
+                            <button type="button"><span>사이드</span></button>
+                        </li>
+                        <li class="">
+                            <button type="button"><span>음료&amp;디저트</span></button>
+                        </li>
+                        <li class="">
+                            <button type="button"><span>아침메뉴</span></button>
+                        </li>
+                    </ul>
+                </div>
+                <div id="target"></div>
             </div>
-        </div>
+            <div class="menuWrap" id="menuWrap">
+            </div>
+        </nav>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
@@ -43,14 +53,52 @@
             );
             });
 
-            window.onload = function readFile(){
-                var reader = new FileReader();
-                let file = new File("C:\work\Doit_웹프로그래밍을위한자바스크립트_소스\BurgerKing\test.txt");
-                reader.readAsText(file, UTF-8);
+            function loadDoc() {
 
-                document.write(reader.result);
-
+                var req = new XMLHttpRequest();
+                req.onreadystatechange = function() {
+                    if (req.readyState == 4 && req.status == 200) {
+                        myFunction(req);
+                    }
+                };
+                req.open("GET", "special.xml", true);
+                req.send();
             }
+
+            function loadMenu(file) {
+                document.getElementById("menuWrap").innerHTML = "";
+
+                var req = new XMLHttpRequest();
+                req.onreadystatechange = function() {
+                    if (req.readyState == 4 && req.status == 200) {
+                        myFunction(req, file);
+                    }
+                };
+                req.open("GET", file, true);
+                req.send();
+            }
+ 
+            function myFunction(xml, file) {
+                var i;
+                var xmlDoc = xml.responseXML;
+                alert(file);
+                var menus = xmlDoc.getElementsByTagName("menu");
+                for(i = 0; i < menus.length; i++){
+                    var tags = "<div class='menus' onclick='menuDetail(" + i + ", '" + file + "' )'>";
+
+                    tags += "<img src='img/" + menus[i].getElementsByTagName("setimg")[0].firstChild.data + "'>";
+                    tags += "<p class='tit'><strong>" +menus[i].getElementsByTagName("setname")[0].firstChild.data + "</strong>";
+                    tags += "</div>";
+
+                    document.getElementById("menuWrap").innerHTML += tags;
+
+                }
+            }
+
+            function menuDetail(num, file){
+                alert(file);
+            }
+
         </script>
 
     </body>

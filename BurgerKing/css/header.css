@@ -126,3 +126,17 @@ ul {
 li {
     list-style: none;
 }
+.menus{
+    text-align: center;
+    float: left;
+    height: 300px;
+}
+.menus>img{
+    width: 300px;
+}
+strong{
+    font-weight: bold;
+}
+.tit{
+    font-size: 1.25rem;
+}

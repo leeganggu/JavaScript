@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <menus>
+    <menu>
+      <setname>상어가족X더콰트로팩1</setname>
+      <setimg>special/s1.png</setimg>
+      <name>상어가족X더콰트로팩1</name>
+      <img>special/s1.png</img>
+      <price>5000</price>
+      <composition>아기상어새우버거+엄마상어새우버거 +아빠상어새우버거+프렌치프라이L +너겟킹4+콜라R3</composition>
+    </menu>
+    <menu>
+      <setname>상어가족X더콰트로팩2</setname>
+      <setimg>special/s2.png</setimg>
+      <name>상어가족X더콰트로팩2</name>
+      <img>special/s2.png</img>
+      <price>5500</price>
+      <composition>더콰트로치즈+아기상어새우버거+ 엄마상어새우버거+프렌치프라이L+ 너겟킹4+콜라R3</composition>
+    </menu>
+    <menu>
+      <setname>상어가족X더콰트로팩3</setname>
+      <setimg>special/s3.png</setimg>
+      <name>상어가족X더콰트로팩3</name>
+      <img>special/s3.png</img>
+      <price>5500</price>
+      <composition>더콰트로치즈+더콰트로치즈X+ 프렌치프라이L+너겟킹4+콜라R2</composition>
+    </menu>
+    <menu>
+      <setname>상어가족X더콰트로팩4</setname>
+      <setimg>special/s4.png</setimg>
+      <name>상어가족X더콰트로팩4</name>
+      <img>special/s4.png</img>
+      <price>5500</price>
+      <composition>더콰트로치즈+통모짜와퍼+ 프렌치프라이L+너겟킹4+콜라R2</composition>
+    </menu>
+    <menu>
+      <setname>메가몬스터X</setname>
+      <setimg>special/s5.png</setimg>
+      <name>메가몬스터X</name>
+      <img>special/s5.png</img>
+      <price>5500</price>
+      <composition>단품</composition>
+    </menu>
+  </menus>
